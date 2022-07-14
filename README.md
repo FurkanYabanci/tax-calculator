@@ -75,7 +75,7 @@ ___
 
 • Docker
 
-# Swagger UI Documentation,
+# Swagger UI Documentation
 
 • http://localhost:${port}/swagger-ui.html
 
