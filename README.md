@@ -33,7 +33,7 @@ ___
   PUT / api/v1/ users  - Sistemdeki kullanıcıları günceller
   
   DELETE/ api/v1/users/{id} – Sistemden kullanıcı siler.
-  
+  ___
 
   GET /api/v1/taxes/{price}/{productType} – Girilen değere ürün tipine göre vergisini hesaplar.
   
@@ -44,7 +44,7 @@ ___
   PUT / api/v1/taxes - Sistemdeki vergileri günceller.
   
   DELETE / api/v1/taxes/{id} – Sistemden vergi siler.
-  
+  ___
   
   GET / api/v1/products - Tüm ürünlerin listesini getirir.
   
