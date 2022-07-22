@@ -76,12 +76,14 @@ class ProductServiceTest {
         when(userService.findById(anyLong())).thenReturn(user);
         when(tax.getRate()).thenReturn(BigDecimal.valueOf(1));
         when(productRepository.save(any())).thenReturn(product);
+        when(product.getName()).thenReturn("Bread");
 
         ProductDto result = productService.save(productSaveRequestDto);
 
-        assertEquals(result.getName(),productSaveRequestDto.getName());
+        assertEquals(result.getName(),"Bread");
 
         verify(taxService).findById(anyLong());
+        verify(userService).findById(anyLong());
     }
 
     @Test
@@ -112,7 +114,7 @@ class ProductServiceTest {
     }
 
     @Test
-    void shouldNotUpdateWhenCustomerDoesNotExist() {
+    void shouldNotUpdateWhenProductDoesNotExist() {
 
         ProductUpdateRequestDto productUpdateRequestDto = mock(ProductUpdateRequestDto.class);
 
